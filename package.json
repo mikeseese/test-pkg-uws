@@ -1,0 +1,23 @@
+{
+  "name": "test-pkg-uws",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "uWebSockets.js": "uNetworking/uWebSockets.js#v20.44.0"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^5.12.0"
+  },
+  "pkg": {
+    "targets": ["node18-win-x64"],
+    "outputPath": "dist",
+    "assets": [
+      "../../node_modules/uWebSockets.js/*.node"
+    ]
+  },
+  "scripts": {
+    "test": "pkg . && dist/test-pkg-uws"
+  }
+}
